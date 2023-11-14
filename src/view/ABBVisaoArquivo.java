@@ -12,8 +12,8 @@ public class ABBVisaoArquivo {
 		ArvoreBB abb = new ArvoreBB();
 		String path = System.getProperty("user.dir");
 		String sep = System.getProperty("file.separator");
-
-		File arquivoEntrada = new File(path + sep + "entrada.txt");
+		
+		File arquivoEntrada = new File(path + sep + args[0]);
 		Scanner scanEntrada = null;
 		Scanner scanComandos = null;
 		try {
@@ -22,7 +22,7 @@ public class ABBVisaoArquivo {
 			e.printStackTrace();
 		}
 
-		File arquivoComandos = new File(path + sep + "comandos.txt");
+		File arquivoComandos = new File(path + sep + args[1]);
 		try {
 			scanComandos = new Scanner(arquivoComandos);
 		} catch (FileNotFoundException e) {
